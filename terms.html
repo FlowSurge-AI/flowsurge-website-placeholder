@@ -47,13 +47,20 @@
       text-decoration: none;
     }
 
-    .badge {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      list-style: none;
     }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
 
     main {
       max-width: 780px;
@@ -154,6 +161,19 @@
       border-top: 1px solid var(--border);
     }
 
+    .footer-links {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 8px;
+      font-size: 0.8rem;
+    }
+
+    .footer-links a:hover { color: var(--accent); text-decoration: underline; }
+
     a { color: var(--accent); }
   </style>
 </head>
@@ -161,8 +181,12 @@
 
 <header>
   <div class="inner">
-    <a class="logo" href="/">FlowSurge</a>
-    <span class="badge">Legal</span>
+    <a class="logo" href="index.html">FlowSurge</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sms-terms.html">SMS Terms</a></li>
+      <li><a href="privacy-policy.html">Privacy</a></li>
+    </ul>
   </div>
 </header>
 
@@ -273,11 +297,17 @@
   </section>
 
   <hr class="divider" />
-  <p style="font-size:0.85rem; color: var(--muted);">See also: <a href="/privacy">Privacy Policy</a></p>
+  <p style="font-size:0.85rem; color: var(--muted);">See also: <a href="privacy-policy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="sms-terms.html">SMS Terms &amp; Disclosures</a></p>
 </main>
 
 <footer>
-  &copy; 2026 FlowSurge. All rights reserved.
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="sms-terms.html">SMS Terms</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div>3022 278th Pl SE, Sammamish, WA 98075</div>
+  <div>&copy; 2026 FlowSurge AI. All rights reserved.</div>
 </footer>
 
 </body>
