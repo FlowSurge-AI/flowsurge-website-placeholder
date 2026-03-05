@@ -17,7 +17,7 @@ export default function LegalLayout({
     <main className="min-h-screen bg-surface pt-24">
       <div className="mx-auto max-w-[780px] px-6 pb-20 pt-14">
         <div className="mb-12 border-b border-surface-dark pb-8">
-          <h1 className="mb-3 font-serif text-4xl font-normal leading-tight text-navy">
+          <h1 className="mb-3 text-4xl font-bold leading-tight text-text-heading">
             {title}
           </h1>
           <p className="text-sm text-text-muted">
@@ -30,9 +30,8 @@ export default function LegalLayout({
 
       <style>{`
         .legal-content h2 {
-          font-family: var(--font-playfair), serif;
           font-size: 1.35rem;
-          font-weight: 400;
+          font-weight: 700;
           margin-bottom: 14px;
           padding-top: 8px;
           color: #0B1628;
