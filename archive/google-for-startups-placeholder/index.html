@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>FlowSurge AI - Optimize Patient Flow for Specialty Dental Practices</title>
+  <meta name="description" content="FlowSurge AI helps independent specialty dental practices increase patient flow, optimize front office operations, and maximize revenue using agentic AI technology." />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <meta property="og:title" content="FlowSurge AI - Optimize Patient Flow for Specialty Dental Practices" />
+  <meta property="og:description" content="Agentic AI system that helps specialty dental practices increase patient counts, revenue, and fill all chairs all the time." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flowsurge.ai" />
+
+  <style>
+    :root {
+      --color-bg: #FFFFFF;
+      --color-text: #1A1A1A;
+      --color-text-secondary: #666666;
+      --color-accent: #00D4AA;
+      --color-accent-hover: #00B896;
+      --color-border: #E5E5E5;
+      --color-section-bg: #FAFAFA;
+      --max-width: 1200px;
+      --section-padding: 80px 24px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #0A0A0A;
+        --color-text: #FFFFFF;
+        --color-text-secondary: #B3B3B3;
+        --color-accent: #00D4AA;
+        --color-accent-hover: #00E5C4;
+        --color-border: #333333;
+        --color-section-bg: #111111;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      nav {
+        background-color: rgba(10, 10, 10, 0.8);
+      }
+    }
+
+    nav .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    nav .logo span {
+      color: var(--color-accent);
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav .nav-links a {
+      color: var(--color-text);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    nav .nav-links a:hover {
+      color: var(--color-accent);
+    }
+
+    nav .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-accent);
+      transition: width 0.2s ease;
+    }
+
+    nav .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      nav .nav-links {
+        gap: 20px;
+        font-size: 14px;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 24px 80px;
+      text-align: center;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 700;
+      margin: 0 0 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: var(--color-text-secondary);
+      margin: 0 0 16px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero .target-audience {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      margin: 0 0 40px;
+    }
+
+    .hero .outcomes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin: 0 0 48px;
+    }
+
+    .hero .outcome-badge {
+      padding: 8px 16px;
+      background-color: var(--color-section-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      font-size: 14px;
+      color: var(--color-text);
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 16px 32px;
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      background-color: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 212, 170, 0.3);
+    }
+
+    /* Section Styling */
+    section {
+      padding: var(--section-padding);
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      margin: 0 0 16px;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--color-text-secondary);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 48px;
+    }
+
+    /* Business Description Section */
+    .business-description {
+      background-color: var(--color-section-bg);
+    }
+
+    .business-description .content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 48px;
+    }
+
+    .business-card {
+      padding: 32px;
+      background-color: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .business-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .business-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: var(--color-accent);
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--color-text-secondary);
+      font-size: 15px;
+    }
+
+    /* Product Section */
+    .product {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .product-status {
+      text-align: center;
+      padding: 12px 24px;
+      background-color: var(--color-section-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 48px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+    }
+
+    /* Screenshot Carousel */
+    .carousel-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-section-bg);
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background-color: var(--color-bg);
+    }
+
+    /* Sequence screenshot - crop to focus on workflow builder steps */
+    .carousel-slide:nth-child(2) {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .carousel-slide:nth-child(2) img {
+      object-fit: cover;
+      object-position: center top;
+      width: 100%;
+      max-height: 800px;
+      display: block;
+    }
+
+    .carousel-caption {
+      padding: 20px;
+      text-align: center;
+      background-color: var(--color-bg);
+      width: 100%;
+    }
+
+    .carousel-caption h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .carousel-caption p {
+      margin: 0;
+      color: var(--color-text-secondary);
+      font-size: 14px;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .carousel-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      font-size: 20px;
+    }
+
+    .carousel-btn:hover:not(:disabled) {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+      border-color: var(--color-accent);
+    }
+
+    .carousel-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-border);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+
+    .carousel-dot.active {
+      background-color: var(--color-accent);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    /* Team Section */
+    .team {
+      background-color: var(--color-section-bg);
+    }
+
+    .team .content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-member h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+
+    .team-member .role {
+      color: var(--color-accent);
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 16px;
+    }
+
+    .team-member .bio {
+      color: var(--color-text-secondary);
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+
+    .team-member .links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .team-member .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background-color: var(--color-section-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      color: var(--color-text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .team-member .links a:hover {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 212, 170, 0.2);
+    }
+
+    /* Contact Section */
+    .contact {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 24px;
+      text-align: center;
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      :root {
+        --section-padding: 60px 24px;
+      }
+
+      .hero {
+        padding: 80px 24px 60px;
+      }
+
+      .business-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">FlowSurge<span>.ai</span></a>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Fill Every Chair, Every Day</h1>
+    <p class="subtitle">Increase patient flow and optimize front office operations with agentic AI</p>
+    <p class="target-audience">Built for independent specialty dental practices: OMS, Orthodontists, Periodontists, Endodontists, Prosthodontists</p>
+    
+    <div class="outcomes">
+      <span class="outcome-badge">Increased Patient Counts</span>
+      <span class="outcome-badge">Higher Revenue</span>
+      <span class="outcome-badge">Lower Costs</span>
+      <span class="outcome-badge">Maximum Chair Utilization</span>
+    </div>
+
+    <a href="mailto:amit@flowsurge.ai" class="cta-button">Contact Us</a>
+  </section>
+
+  <!-- Business Description Section -->
+  <section class="business-description" id="overview">
+    <div class="content">
+      <h2 class="section-title">Optimize Your Practice Operations</h2>
+      <p class="section-subtitle">FlowSurge AI is a cloud-based SaaS platform powered by agentic AI, designed specifically for specialty dental practices to streamline operations, reduce administrative burden, and maximize patient engagement.</p>
+
+      <div class="business-grid">
+        <div class="business-card">
+          <h3>What We Do</h3>
+          <p>We provide an intelligent system that automates patient flow management and front office operations using advanced agentic AI technology, helping practices operate at peak efficiency.</p>
+        </div>
+        <div class="business-card">
+          <h3>Problems We Solve</h3>
+          <p>Reduce no-shows, optimize appointment scheduling, eliminate manual administrative tasks, and ensure every treatment chair is utilized throughout the day.</p>
+        </div>
+        <div class="business-card">
+          <h3>Target Audience</h3>
+          <p>Independent specialty dental practices including Oral and Maxillofacial Surgeons, Orthodontists, Periodontists, Endodontists, and Prosthodontists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="product" id="product">
+    <h2 class="section-title">Product Overview</h2>
+    <p class="section-subtitle">Currently in early pilots and private development. See how FlowSurge AI transforms practice management.</p>
+
+    <div class="product-status">Early Pilots & Private Development</div>
+
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="screenshots/leads.png" alt="FlowSurge AI Leads Management" />
+            <div class="carousel-caption">
+              <h3>Lead Management</h3>
+              <p>Streamline patient lead tracking and conversion with intelligent automation</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshots/SCR-20251105-jgsd.png" alt="FlowSurge AI Workflow Sequences" />
+            <div class="carousel-caption">
+              <h3>Automated Workflows</h3>
+              <p>Create and manage patient engagement sequences with automated SMS, tasks, and follow-ups</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshots/tasks.png" alt="FlowSurge AI Task Management" />
+            <div class="carousel-caption">
+              <h3>Task Management</h3>
+              <p>Track and manage front office tasks with intelligent prioritization and automation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" aria-label="Previous">‹</button>
+        <button class="carousel-btn" id="nextBtn" aria-label="Next">›</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team" id="team">
+    <div class="content">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">Experienced leaders combining technology expertise with deep healthcare domain knowledge</p>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <h3>Amit Kulkarni</h3>
+          <p class="role">Founder & CEO</p>
+          <p class="bio">Amit brings extensive experience in technology and leadership, focusing on integrating AI solutions into healthcare to drive innovation and operational efficiency. He leads FlowSurge AI's strategic vision and product development.</p>
+          <div class="links">
+            <a href="mailto:amit@flowsurge.ai">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Email
+            </a>
+            <a href="https://www.linkedin.com/in/amitrkulkarni/" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <h3>Dr. Hardeep Dhaliwal</h3>
+          <p class="role">Chief Medical Officer</p>
+          <p class="bio">Dr. Dhaliwal is a quadruple board-certified surgeon with over 13 years of experience in oral and maxillofacial surgery. He brings a patient-first approach and deep clinical expertise to ensure FlowSurge AI solutions meet the real-world needs of dental practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Interested in learning how FlowSurge AI can transform your practice? Reach out to discuss pilot opportunities.</p>
+    <a href="mailto:amit@flowsurge.ai" class="cta-button">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> FlowSurge AI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Carousel functionality
+    (function() {
+      const track = document.getElementById('carouselTrack');
+      const slides = track.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsContainer = document.getElementById('carouselDots');
+      
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+
+      // Create dots
+      for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+        if (i === 0) dot.classList.add('active');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === currentIndex);
+        });
+
+        // Update button states
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === totalSlides - 1;
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+      }
+
+      function nextSlide() {
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+          updateCarousel();
+        }
+      }
+
+      function prevSlide() {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      }
+
+      prevBtn.addEventListener('click', prevSlide);
+      nextBtn.addEventListener('click', nextSlide);
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+      });
+
+      // Auto-advance (optional, commented out)
+      // setInterval(() => {
+      //   if (currentIndex < totalSlides - 1) {
+      //     nextSlide();
+      //   } else {
+      //     goToSlide(0);
+      //   }
+      // }, 5000);
+
+      // Initialize
+      updateCarousel();
+    })();
+  </script>
+</body>
+</html>

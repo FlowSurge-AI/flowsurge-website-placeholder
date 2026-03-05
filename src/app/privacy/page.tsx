@@ -1,0 +1,197 @@
+import { Metadata } from "next";
+import LegalLayout from "@/components/layout/LegalLayout";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | FlowSurge AI",
+  description: "FlowSurge AI Privacy Policy — how we collect, use, disclose, and safeguard your information.",
+};
+
+export default function PrivacyPolicy() {
+  return (
+    <LegalLayout
+      title="Privacy Policy"
+      effectiveDate="February 18, 2026"
+      lastUpdated="February 18, 2026"
+    >
+      <div className="highlight-box">
+        <p>
+          FlowSurge (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your
+          personal information. This Privacy Policy explains how we collect,
+          use, disclose, and safeguard information when you interact with our
+          platform and SMS communications.
+        </p>
+      </div>
+
+      <section>
+        <h2>1. Information We Collect</h2>
+        <p>
+          We collect information that dental, oral surgery, and orthodontic
+          practices provide to us on behalf of their patients, including:
+        </p>
+        <ul>
+          <li>Patient name and contact information (including mobile phone numbers)</li>
+          <li>Appointment scheduling data and visit history</li>
+          <li>Consent records indicating agreement to receive text messages</li>
+          <li>Communication preferences and opt-out status</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2. How We Use Your Information</h2>
+        <p>
+          We use collected information solely to facilitate operational
+          communications between dental practices and their patients, including:
+        </p>
+        <ul>
+          <li>Appointment reminders and scheduling confirmations</li>
+          <li>Post-visit follow-up and care notifications</li>
+          <li>Referral coordination and specialist scheduling updates</li>
+          <li>Operational alerts related to your healthcare interactions</li>
+        </ul>
+      </section>
+
+      <div className="sms-card">
+        <h2>3. SMS and Text Messaging</h2>
+
+        <p>
+          <strong>How We Collect Mobile Numbers for SMS:</strong> Mobile phone
+          numbers are collected directly by the dental or orthodontic practice
+          through appointment scheduling forms, patient intake forms, or
+          referral forms. Consent to receive text messages is obtained at the
+          point of collection via written or electronic form acknowledgment.
+        </p>
+
+        <p>
+          <strong>How We Use Mobile Numbers:</strong> Mobile phone numbers
+          collected for SMS communication are used solely for appointment
+          reminders, scheduling updates, referral coordination, and other
+          healthcare-related notifications relevant to your care. We do not use
+          mobile numbers for general marketing or promotional purposes unrelated
+          to your healthcare relationship.
+        </p>
+
+        <p>
+          <strong>No Sale or Sharing of Mobile Data:</strong> We do not sell,
+          rent, lease, or share mobile phone numbers or SMS consent data with
+          third parties for marketing purposes. Mobile numbers and SMS consent
+          information are never transferred to advertisers or data brokers. SMS
+          data may only be shared with authorized messaging service providers
+          (such as Twilio) solely to deliver messages on behalf of your
+          healthcare provider.
+        </p>
+
+        <p>
+          <strong>Message Frequency:</strong> Message frequency varies based on
+          your appointment activity and care schedule. You may receive multiple
+          messages per month during active treatment phases.
+        </p>
+
+        <p>
+          <strong>Message and Data Rates:</strong> Standard message and data
+          rates may apply depending on your mobile carrier and plan.
+        </p>
+
+        <p>
+          <strong>How to Opt Out:</strong> You may opt out of SMS communications
+          at any time by replying <strong>STOP</strong> to any message you
+          receive. After opting out, you will receive a single confirmation
+          message and no further texts will be sent. To resume messages, reply{" "}
+          <strong>START</strong>.
+        </p>
+
+        <p>
+          <strong>Help:</strong> Reply <strong>HELP</strong> to any message for
+          assistance, or contact us at{" "}
+          <a href="mailto:support@flowsurge.ai">support@flowsurge.ai</a>.
+        </p>
+      </div>
+
+      <section>
+        <h2>4. Data Sharing and Disclosure</h2>
+        <p>
+          We do not sell or share your personal information with third parties
+          except as follows:
+        </p>
+        <ul>
+          <li>
+            <strong>Service Providers:</strong> We may share data with messaging
+            and infrastructure providers (e.g., Twilio) strictly to deliver
+            communications on behalf of your dental practice.
+          </li>
+          <li>
+            <strong>Legal Requirements:</strong> We may disclose information if
+            required by law, regulation, or valid legal process.
+          </li>
+          <li>
+            <strong>Business Transfers:</strong> In the event of a merger or
+            acquisition, data may be transferred as part of that transaction,
+            subject to the same privacy protections.
+          </li>
+        </ul>
+        <p>
+          Under no circumstances are mobile phone numbers or SMS consent records
+          shared with third parties for advertising or marketing purposes.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Data Security</h2>
+        <p>
+          We implement industry-standard security measures including encryption
+          in transit and at rest, access controls, and regular security reviews
+          to protect your personal information from unauthorized access,
+          disclosure, or misuse.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Data Retention</h2>
+        <p>
+          We retain personal data only as long as necessary to provide services
+          to the dental practice and comply with applicable laws. Opt-out
+          records are retained indefinitely to honor suppression requests.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Your Rights</h2>
+        <p>
+          Depending on your jurisdiction, you may have the right to access,
+          correct, or delete your personal information. To exercise these
+          rights, contact the dental practice directly or reach us at{" "}
+          <a href="mailto:privacy@flowsurge.ai">privacy@flowsurge.ai</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. The effective
+          date at the top of this page will reflect the most recent revision.
+          Continued use of our communications after changes constitutes
+          acceptance of the updated policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Contact Us</h2>
+        <p>
+          If you have questions about this Privacy Policy or our data practices,
+          please contact:
+        </p>
+        <p>
+          <strong>FlowSurge</strong>
+          <br />
+          Email:{" "}
+          <a href="mailto:privacy@flowsurge.ai">privacy@flowsurge.ai</a>
+        </p>
+      </section>
+
+      <hr className="legal-divider" />
+      <p className="see-also">
+        See also: <a href="/terms/">Terms &amp; Conditions</a> &middot;{" "}
+        <a href="/sms-terms/">SMS Terms &amp; Disclosures</a>
+      </p>
+    </LegalLayout>
+  );
+}

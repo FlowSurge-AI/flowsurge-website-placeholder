@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FlowSurge AI – Private Beta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI-powered referral & workflow automation for specialty dental practices. Currently in private beta." />
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  
+  <style>
+    :root { 
+      color-scheme: light dark; 
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      margin: 0;
+      padding: 24px;
+      background: canvas;
+      color: canvastext;
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid;
+      border-color: color-mix(in srgb, currentColor 20%, transparent);
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 20px;
+      opacity: 0.7;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 36px);
+      margin: 0 0 16px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .tagline {
+      font-size: clamp(16px, 2vw, 18px);
+      opacity: 0.9;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid;
+      border-color: color-mix(in srgb, currentColor 30%, transparent);
+      border-radius: 10px;
+      padding: 10px 14px;
+      text-decoration: none;
+      color: inherit;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    .right-panel {
+      border: 1px solid;
+      border-color: color-mix(in srgb, currentColor 20%, transparent);
+      border-radius: 12px;
+      padding: 20px;
+      background: color-mix(in srgb, currentColor 3%, transparent);
+    }
+
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+      margin: 40px 0 16px;
+      font-weight: 600;
+    }
+
+    .section {
+      border-top: 1px solid;
+      border-color: color-mix(in srgb, currentColor 20%, transparent);
+      padding-top: 20px;
+      margin-top: 24px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      border-radius: 12px;
+      border: 1px solid;
+      border-color: color-mix(in srgb, currentColor 20%, transparent);
+      padding: 18px;
+      font-size: 14px;
+      background: color-mix(in srgb, currentColor 3%, transparent);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin: 0 0 10px;
+      font-weight: 600;
+    }
+
+    .small-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.7;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 10px 0 10px 20px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid;
+      border-color: color-mix(in srgb, currentColor 20%, transparent);
+      opacity: 0.6;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="badge">
+      FlowSurge AI &middot; Private beta for dental specialists
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>AI-powered referral & workflow automation for speciality dental practices</h1>
+        <p class="tagline">
+          FlowSurge AI turns referrals and operational workflows into a fully automated revenue engine
+          &mdash; increasing case acceptance and production while cutting manual admin work for your team.
+        </p>
+
+       
+
+        <div class="section">
+          <h2>What FlowSurge AI does</h2>
+          <ul>
+            <li><span class="highlight">Increases revenue:</span> automatically surfaces and follows up on high-value referral and treatment opportunities.</li>
+            <li><span class="highlight">Decreases manual staff work:</span> automates outreach, reminders, status updates, and task routing so your team isn’t living in spreadsheets and sticky notes.</li>
+            <li><span class="highlight">Ensures SOPs are codified and followed:</span> every referral, every case, every follow-up runs through a standardized, automated workflow &mdash; not tribal knowledge.</li>
+          </ul>
+        </div>
+
+        <div class="cta-row">
+          <a href="mailto:amit@flowsurge.ai" class="btn">Ask about joining the pilot</a>
+        </div>
+      </div>
+
+      <div class="right-panel">
+        <div class="small-label">Why us</div>
+
+        <div class="card" style="margin-bottom:10px;">
+          <h3>Clinical + deep tech founding team</h3>
+          <ul>
+            <li><span class="highlight">Amit Kulkarni: Long-time tech executive</span> (ex-Google, Amazon, Microsoft) building AI and workflow platforms at scale.</li>
+            <li><span class="highlight">Dr. Hardeep Dhaliwal: Board-certified oral & maxillofacial surgeon</span> actively running a high performing practice.</li>
+            
+          </ul>
+          <div>We’re designing to solve real world problems: production targets, referral relationships, staffing realities, and HIPAA compliance.</div>
+        </div>
+
+        <div class="card">
+          <h3>Pilot in progress at an OMS practice</h3>
+          <ul>
+            <li>We are in the process of <span class="highlight">deploying our first pilot inside a working OMS practice right now</span>.</li>
+            <li>Starting with referral intake and downstream workflows: tracking every referral from receipt to treatment completion.</li>
+            <li>Iterating side-by-side with surgeons and staff to harden the workflows before broader rollout.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">What gets automated</div>
+      <div class="two-col">
+        <div class="card">
+          <h3>Revenue & relationship levers</h3>
+          <ul>
+            <li>AI-powered intelligent routing and prioritization of new referrals.</li>
+            <li>Automated follow-ups with patients and referring offices.</li>
+            <li>Visibility into “leakage” &mdash; missed consults, unscheduled treatment, incomplete cases.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Operational discipline</h3>
+          <ul>
+            <li>Standard operating processes embedded as click-through workflows.</li>
+            <li>Task lists auto-generated for front desk, treatment coordinators, and clinical teams.</li>
+            <li>Audit-friendly logs showing that SOPs were followed on every case.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; <span id="year"></span> FlowSurge AI
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
