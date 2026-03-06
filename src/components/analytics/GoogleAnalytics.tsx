@@ -2,10 +2,9 @@
 
 import Script from "next/script";
 
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // Replace with real GA measurement ID
+const GA_MEASUREMENT_ID = "G-5RPQ0R47DJ";
 
 export default function GoogleAnalytics() {
-  if (GA_MEASUREMENT_ID === "G-XXXXXXXXXX") return null;
 
   return (
     <>
